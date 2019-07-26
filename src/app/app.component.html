@@ -1,8 +1,9 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <app-navbar (changeLanguageEvent)="changeLanguage($event)"></app-navbar>
 <section class="w-100 h-100">
-    <div class="w-75 float-left header" style="background:rgb(255, 251, 0)">
-        <p [innerHTML]="display" class="header-text"></p>
+    <div class="w-75 float-left header">
+        <app-typewriter [speed]="100" [fontWeight]="'lighter'" [fontSize]="'37px'" [fontColor]="'black'" [languageEvent]="languageSubject.asObservable()" [text]="textHello"></app-typewriter><br>
+        <app-typewriter [speed]="100" [fontWeight]="'bolder'" [fontSize]="'37px'" [fontColor]="'black'" [languageEvent]="languageSubject.asObservable()" [text]="textIam"></app-typewriter><br>
+        <app-typewriter [speed]="100" [fontWeight]="'lighter'" [fontSize]="'37px'" [fontColor]="'black'" [languageEvent]="languageSubject.asObservable()" [text]="textThis"></app-typewriter>
     </div>
     <div class="w-25 float-right" style="background:green">
         rwrewrwe

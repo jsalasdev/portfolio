@@ -3,5 +3,9 @@
         "about": "About",
         "contact": "Contact"
     },
-    "header": "Hi, <b>I'm Jesus</b> and this is Jackass!"
+    "header": {
+        "hello": "Hi,",
+        "iam": "I'm Jesús",
+        "this": "and this is JACKASS!!"
+    }
 }
