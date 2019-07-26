@@ -4,8 +4,14 @@
         "contact": "Contáctame"
     },
     "header": {
-        "hello": "Hola,",
+        "hello": "Hola, 🖐",
         "iam": "Soy Jesús",
-        "this": "y esto es JACKASS!!"
+        "this": "y esto es JACKASS!!",
+        "list": [
+            "test1",
+            "test2",
+            "test3",
+            "test4"
+        ]
     }
 }

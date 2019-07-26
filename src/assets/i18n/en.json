@@ -6,6 +6,12 @@
     "header": {
         "hello": "Hi,",
         "iam": "I'm Jesús",
-        "this": "and this is JACKASS!!"
+        "this": "and this is JACKASS!!",
+        "list": [
+            "test1",
+            "test2",
+            "test3",
+            "test4"
+        ]
     }
 }

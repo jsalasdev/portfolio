@@ -15,6 +15,7 @@ export class AppComponent implements OnInit {
   textHello = '';
   textIam = '';
   textThis = '';
+  textList = [];
 
   constructor(private translate: TranslateService) { }
 
@@ -29,6 +30,9 @@ export class AppComponent implements OnInit {
   }
 
   initHeader() {
+    this.translate.get('header.list').subscribe(res => {
+      this.textList = res;
+    });
     this.translate.get('header.hello').subscribe(res => {
       this.textHello = res;
     });

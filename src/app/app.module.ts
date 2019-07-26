@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 import { TypewriterComponent } from './components/typewriter/typewriter.component';
+import { TypewriterListComponent } from './components/typewriter-list/typewriter-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    TypewriterComponent
+    TypewriterComponent,
+    TypewriterListComponent
   ],
   imports: [
     BrowserModule,

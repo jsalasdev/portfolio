@@ -1,28 +1,28 @@
 import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { Observable } from 'rxjs';
-
 @Component({
-  selector: 'app-typewriter',
-  templateUrl: './typewriter.component.html',
-  styleUrls: ['./typewriter.component.css']
+  selector: 'app-typewriter-list',
+  templateUrl: './typewriter-list.component.html',
+  styleUrls: ['./typewriter-list.component.css']
 })
-export class TypewriterComponent implements OnInit, OnChanges {
+export class TypewriterListComponent implements OnInit, OnChanges {
 
   @Input() fontWeight: string;
   @Input() fontSize: string;
   @Input() fontColor: string;
-  @Input() text: string;
+  @Input() textList: string[];
   @Input() languageEvent: Observable<void>;
   @Input() speed = 200;
 
   private i = 0;
 
   display = '';
+  text = '';
 
   constructor() { }
 
   ngOnChanges(changes: SimpleChanges) {
-    if (changes.text && !(changes.text.firstChange)) {
+    if (changes.textList && !(changes.textList.firstChange)) {
       this.ngOnInit();
     }
   }
@@ -31,7 +31,10 @@ export class TypewriterComponent implements OnInit, OnChanges {
     this.languageEvent.subscribe(() => {
       this.display = '';
     });
-    this.typeWriter(this);
+    this.textList.forEach(text => {
+      this.text = text;
+      this.typeWriter(this);
+    });
   }
 
   typeWriter(that) {
@@ -42,5 +45,4 @@ export class TypewriterComponent implements OnInit, OnChanges {
       setTimeout(that.typeWriter, that.speed, that);
     }
   }
-
 }
