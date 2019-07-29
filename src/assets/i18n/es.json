@@ -5,13 +5,11 @@
     },
     "header": {
         "hello": "Hola, 🖐",
-        "iam": "Soy Jesús",
-        "this": "y esto es JACKASS!!",
-        "list": [
-            "test1",
-            "test2",
-            "test3",
-            "test4"
-        ]
+        "iam": "Soy <b>Jesús</b>, me considero ",
+        "interests": "Mis principales intereses son <b>Node,</b> <b>TypeScript, </b><b>Scrapping, </b><b>Aplicaciones en Tiempo Real </b><b>y Marketing Online.</b>",
+        "hobbies": [
+            "curioso 🔎", "resolutivo 💡", "emprendedor ☕", "innovador 🚀"
+        ],
+        "checkout": "Revisa mis <b>proyectos</b> 👇"
     }
 }

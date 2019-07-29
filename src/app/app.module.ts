@@ -8,13 +8,15 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 import { TypewriterComponent } from './components/typewriter/typewriter.component';
 import { TypewriterListComponent } from './components/typewriter-list/typewriter-list.component';
+import { ProjectComponent } from './components/project/project.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     TypewriterComponent,
-    TypewriterListComponent
+    TypewriterListComponent,
+    ProjectComponent
   ],
   imports: [
     BrowserModule,

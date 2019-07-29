@@ -4,14 +4,12 @@
         "contact": "Contact"
     },
     "header": {
-        "hello": "Hi,",
-        "iam": "I'm Jesús",
-        "this": "and this is JACKASS!!",
-        "list": [
-            "test1",
-            "test2",
-            "test3",
-            "test4"
-        ]
+        "hello": "Hi, 🖐",
+        "iam": "I'm <b>Jesús</b>, I consider myself ",
+        "interests": "My main interests are <b>Node,</b> <b>TypeScript, </b><b>Scrapping, </b><b>Realtime Apps </b><b>and Online Marketing.</b>",
+        "hobbies": [
+            "curious 🔎", "decisive 💡", "entrepeneur ☕", "innovative 🚀"
+        ],
+        "checkout": "Check my <b>work</b> 👇"
     }
 }
