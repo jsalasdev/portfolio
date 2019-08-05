@@ -18,7 +18,9 @@ export class AppComponent implements OnInit {
   textInterests = '';
   textCheckout = '';
   textList = [];
+
   hobbies: Typed;
+  projects = [];
 
   constructor(private translate: TranslateService) {
 
@@ -26,12 +28,20 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.initHeader();
+    this.initWorks();
   }
 
   changeLanguage(event) {
     this.translate.setDefaultLang(event);
     this.initHeader();
+    this.initWorks();
     this.languageSubject.next();
+  }
+
+  initWorks(){
+    this.translate.get('projects').subscribe(res => {
+      this.projects = res;
+    });
   }
 
   initHeader() {

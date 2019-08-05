@@ -11,5 +11,18 @@
             "curious 🔎", "decisive 💡", "entrepeneur ☕", "innovative 🚀"
         ],
         "checkout": "Check my <b>work</b> 👇"
-    }
+    },
+    "projects": [{
+            "title": "Hairly",
+            "description": "ENG Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolor praesentium at quod autem omnis, amet eaque unde ",
+            "tech": ["Android SDK", "Firebase"],
+            "status": "inactive"
+        },
+        {
+            "title": "Hookapp",
+            "description": "ENG Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolor praesentium at quod autem omnis, amet eaque unde ",
+            "tech": ["Ionic 4", "Angular"],
+            "status": "inactive"
+        }
+    ]
 }

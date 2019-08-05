@@ -6,10 +6,12 @@
         <span class="text-dark" style="font-size: 30px;" #hobbies id="hobbies"></span><br>
         <span class="font-weight-lighter text-dark" style="font-size: 25px;" [innerHTML]="textInterests"></span><br>
     </div>
-    <div class="text-center">
-        <span class="font-weight-lighter text-dark" style="font-size: 30px;" [innerHTML]="textCheckout"></span><br>
+    <div id="checkout" class="text-center">
+        <a href="#projects"><span class="font-weight-lighter text-dark" style="font-size: 30px;" [innerHTML]="textCheckout"></span><br></a>
     </div>
 </section>
-<section class="w-100 h-100">
-    <app-project></app-project>
+<section id="projects" style="display: flex" class="w-100 mb-5 pr-5 pl-5">
+    <div class="ml-4" *ngFor="let project of projects">
+        <app-project [project]="project"></app-project>
+    </div>
 </section>

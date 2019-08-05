@@ -1,3 +1,15 @@
 .header {
     padding: 300px;
 }
+
+#checkout {
+    font-size: 30px;
+}
+
+#checkout a {
+    text-decoration: none;
+}
+
+#checkout a:hover {
+    text-decoration: none;
+}
