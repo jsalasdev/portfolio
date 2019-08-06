@@ -16,12 +16,14 @@
             "title": "Hairly",
             "description": "Marketplace geolocalizado para peluqueros y peluquerías. Los usuarios pueden coger cita desde la app y los peluqueros pueden gestionar sus citas sin perder tiempo cogiendo el teléfono.",
             "tech": ["Android SDK", "Firebase", "Fresco", "Retrofit", "Facebook API"],
+            "image": "../../assets/images/hairly.png",
             "status": "inactive"
         },
         {
             "title": "Hookapp",
             "description": "Aplicación para localizar pubs cercanos que ofrecen cachimbas en sus cartas. Además de poder ver características del local como: la gama de tabacos que tiene en ese momento el local, si tiene aire acondicionado, billar, etc.",
             "tech": ["Ionic 4", "Angular", "Node", "TypeScript", "Express", "MongoDB"],
+            "image": "../../assets/images/hookapp.png",
             "status": "inactive"
         },
         {
@@ -29,7 +31,33 @@
             "description": "Aplicación para publicar y encontrar ofertas relacionadas con el mercado tech.",
             "tech": ["Angular", "Node", "TypeScript", "Express", "MongoDB", "Bootstrap", "MDBootstrap", "Stripe API"],
             "status": "active",
-            "image": "../../assets/images/butscreen.png"
+            "image": "../../assets/images/buscountech.png"
+        },
+        {
+            "title": "Vendedor Amazon FBA",
+            "description": "Vendedor asociado con Amazon.",
+            "tech": ["Ecommerce", "Amazon FBA", "Marketing"],
+            "status": "active"
+        },
+        {
+            "title": "Herramienta de gestión",
+            "description": "Herramienta propia para trabajar con un proveedor. Nos permite sincronizar un tipo de producto que vendemos automáticamente ahorrándo horas en el análisis e introducción de este a la base de datos.",
+            "tech": ["Node", "WebScrapping", "Cheerio", "Socket.io", "Express", "TypeScript", "Angular", "MongoDB", "Ecommerce"],
+            "image": "../../assets/images/crawler.png",
+            "status": "active"
+        },
+        {
+            "title": "App comparativa de componentes",
+            "description": "Algoritmo para comparar productos entre PcComponentes y PcBox. La idea era hacer una aplicación web para generar presupuestos de diferentes páginas añadiendo un enlace de afiliados para monetizarla.",
+            "tech": ["Python", "WebScrapping", "Scrappy"],
+            "status": "inactive"
+        },
+        {
+            "title": "BOT Telegram apuestas",
+            "description": "Bot para gestionar apuestas de CS:GO en grupo de amigos de telegram",
+            "tech": ["Python", "Sql Alchemy", "Emoji"],
+            "image": "../../assets/images/betbot.png",
+            "status": "inactive"
         }
     ]
 }

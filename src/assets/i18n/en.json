@@ -14,14 +14,49 @@
     },
     "projects": [{
             "title": "Hairly",
-            "description": "ENG Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolor praesentium at quod autem omnis, amet eaque unde ",
+            "description": "Geolocated market for hairdressers and hairdressers. Users can make an appointment from the application and hairdressers can manage their appointments without wasting time picking up the phone.",
             "tech": ["Android SDK", "Firebase"],
+            "image": "../../assets/images/hairly.png",
             "status": "inactive"
         },
         {
             "title": "Hookapp",
-            "description": "ENG Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolor praesentium at quod autem omnis, amet eaque unde ",
+            "description": "Application to locate nearby pubs that offer hookahs in their letters. In addition to being able to see characteristics of the premises such as: the range of tobacco that the premises currently has, if it has air conditioning, billiard, etc.",
             "tech": ["Ionic 4", "Angular", "Node", "TypeScript", "Express", "MongoDB"],
+            "image": "../../assets/images/hookapp.png",
+            "status": "inactive"
+        },
+        {
+            "title": "BuscoUnTech",
+            "description": "Application to publish and find offers related to the tech market.",
+            "tech": ["Angular", "Node", "TypeScript", "Express", "MongoDB", "Bootstrap", "MDBootstrap", "Stripe API"],
+            "status": "active",
+            "image": "../../assets/images/buscountech.png"
+        },
+        {
+            "title": "Amazon FBA Seller",
+            "description": "Seller associated with Amazon.",
+            "tech": ["Ecommerce", "Amazon FBA", "Marketing"],
+            "status": "active"
+        },
+        {
+            "title": "Management tool",
+            "description": "Own tool to work with a supplier.It allows us to synchronize a type of product that we sell automatically saving hours in the analysis and introduction of this to the database.",
+            "tech": ["Node", "WebScrapping", "Cheerio", "Socket.io", "Express", "TypeScript", "Angular", "MongoDB", "Ecommerce"],
+            "image": "../../assets/images/crawler.png",
+            "status": "active"
+        },
+        {
+            "title": "Component Comparison App",
+            "description": "Algoritmo para comparar productos entre PcComponentes y PcBox. The idea was to make a web application to generate budgets for different pages by adding an affiliate link to monetize it.",
+            "tech": ["Python", "WebScrapping", "Scrappy"],
+            "status": "inactive"
+        },
+        {
+            "title": "BOT Telegram bets",
+            "description": "Bot to manage CS:GO bets in telegram friends group",
+            "tech": ["Python", "Sql Alchemy", "Emoji"],
+            "image": "../../assets/images/betbot.png",
             "status": "inactive"
         }
     ]

@@ -10,8 +10,8 @@
         <a href="#projects"><span class="font-weight-lighter text-dark" style="font-size: 30px;" [innerHTML]="textCheckout"></span><br></a>
     </div>
 </section>
-<section id="projects" style="display: flex" class="w-100 mb-5 pr-5 pl-5">
-    <div class="ml-4" *ngFor="let project of projects">
+<section id="projects" class="w-100 mb-5 pr-5 pl-5">
+    <div *ngFor="let project of projects">
         <app-project [project]="project"></app-project>
     </div>
 </section>

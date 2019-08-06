@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
+import { Component, ElementRef, ViewChild, OnInit, SimpleChanges, OnChanges } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Subject } from 'rxjs';
 import Typed from 'typed.js';
@@ -29,6 +29,11 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.initHeader();
     this.initWorks();
+  }
+
+  detectVersion() {
+    const ua = navigator.userAgent;
+    console.log(ua);
   }
 
   changeLanguage(event) {
