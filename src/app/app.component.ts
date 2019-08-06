@@ -38,7 +38,7 @@ export class AppComponent implements OnInit {
     this.languageSubject.next();
   }
 
-  initWorks(){
+  initWorks() {
     this.translate.get('projects').subscribe(res => {
       this.projects = res;
     });
@@ -52,7 +52,7 @@ export class AppComponent implements OnInit {
       }
       this.hobbies = new Typed('#hobbies', {
         strings: this.textList,
-        typeSpeed: 70,
+        typeSpeed: 120,
         backSpeed: 10,
         loop: true,
         cursorChar: '_'

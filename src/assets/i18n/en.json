@@ -6,7 +6,7 @@
     "header": {
         "hello": "Hi, 🖐",
         "iam": "I'm <b>Jesús</b>, I consider myself ",
-        "interests": "My main interests are <b>Node,</b> <b>TypeScript, </b><b>Scrapping, </b><b>Realtime Apps </b><b>and Online Marketing.</b>",
+        "interests": "My main interests are <b>Node, TypeScript, Scrapping, Realtime Apps and Online Marketing.</b>",
         "hobbies": [
             "curious 🔎", "decisive 💡", "entrepeneur ☕", "innovative 🚀"
         ],
@@ -21,7 +21,7 @@
         {
             "title": "Hookapp",
             "description": "ENG Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolor praesentium at quod autem omnis, amet eaque unde ",
-            "tech": ["Ionic 4", "Angular"],
+            "tech": ["Ionic 4", "Angular", "Node", "TypeScript", "Express", "MongoDB"],
             "status": "inactive"
         }
     ]

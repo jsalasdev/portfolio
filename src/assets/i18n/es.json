@@ -6,7 +6,7 @@
     "header": {
         "hello": "Hola, 🖐",
         "iam": "Soy <b>Jesús</b>, me considero ",
-        "interests": "Mis principales intereses son <b>Node,</b> <b>TypeScript, </b><b>Scrapping, </b><b>Aplicaciones en Tiempo Real </b><b>y Marketing Online.</b>",
+        "interests": "Mis principales intereses son <b>Node, TypeScript, webscrapping, aplicaciones en tiempo real, comercio electrónico y marketing Online.</b>",
         "hobbies": [
             "curioso 🔎", "resolutivo 💡", "emprendedor ☕", "innovador 🚀"
         ],
@@ -14,15 +14,22 @@
     },
     "projects": [{
             "title": "Hairly",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolor praesentium at quod autem omnis, amet eaque unde ",
-            "tech": ["Android SDK", "Firebase"],
+            "description": "Marketplace geolocalizado para peluqueros y peluquerías. Los usuarios pueden coger cita desde la app y los peluqueros pueden gestionar sus citas sin perder tiempo cogiendo el teléfono.",
+            "tech": ["Android SDK", "Firebase", "Fresco", "Retrofit", "Facebook API"],
             "status": "inactive"
         },
         {
             "title": "Hookapp",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolor praesentium at quod autem omnis, amet eaque unde ",
-            "tech": ["Ionic 4", "Angular"],
+            "description": "Aplicación para localizar pubs cercanos que ofrecen cachimbas en sus cartas. Además de poder ver características del local como: la gama de tabacos que tiene en ese momento el local, si tiene aire acondicionado, billar, etc.",
+            "tech": ["Ionic 4", "Angular", "Node", "TypeScript", "Express", "MongoDB"],
             "status": "inactive"
+        },
+        {
+            "title": "BuscoUnTech",
+            "description": "Aplicación para publicar y encontrar ofertas relacionadas con el mercado tech.",
+            "tech": ["Angular", "Node", "TypeScript", "Express", "MongoDB", "Bootstrap", "MDBootstrap", "Stripe API"],
+            "status": "active",
+            "image": "../../assets/images/butscreen.png"
         }
     ]
 }
