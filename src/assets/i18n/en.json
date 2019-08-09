@@ -4,8 +4,10 @@
         "contact": "Contact"
     },
     "header": {
-        "hello": "Hi, 🖐",
-        "iam": "I'm <b>Jesús</b>, I consider myself ",
+        "hello": "Hi, I'm <b>Jesús</b> 🖐",
+        "iam": "I consider myself ",
+        "nicetomeetyou": "Nice to meet you.",
+        "presentation": "I started to get interested in programming when I was 15 years old. Since then, I have carried out several projects and collaborated with other skilled people to create and develop websites, information systems and mobile applications.",
         "interests": "My main interests are <b>Node, TypeScript, Scrapping, Realtime Apps and Online Marketing.</b>",
         "hobbies": [
             "curious 🔎", "decisive 💡", "entrepeneur ☕", "innovative 🚀"

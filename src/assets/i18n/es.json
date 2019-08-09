@@ -4,8 +4,10 @@
         "contact": "Contáctame"
     },
     "header": {
-        "hello": "Hola, 🖐",
-        "iam": "Soy <b>Jesús</b>, me considero ",
+        "hello": "Hola, Soy <b>Jesús</b> 🖐",
+        "iam": "Me considero ",
+        "nicetomeetyou": "Encantado de conocerte.",
+        "presentation": "Empecé a  interesarme por la programación cuando tenía 15 años. Desde entonces, he realizado varios proyectos y colaborado con otras personas para crear y desarrollar sitios web, sistemas de información y aplicaciones móviles.",
         "interests": "Mis principales intereses son <b>Node, TypeScript, webscrapping, aplicaciones en tiempo real, comercio electrónico y marketing Online.</b>",
         "hobbies": [
             "curioso 🔎", "resolutivo 💡", "emprendedor ☕", "innovador 🚀"

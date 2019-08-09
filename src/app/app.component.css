@@ -1,9 +1,13 @@
 .header {
-    padding: 300px;
+    padding: 10em;
 }
 
 #checkout {
     font-size: 30px;
+}
+
+.middle>* {
+    vertical-align: middle;
 }
 
 #checkout a {

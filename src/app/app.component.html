@@ -1,13 +1,26 @@
 <app-navbar (changeLanguageEvent)="changeLanguage($event)"></app-navbar>
-<section class="w-100 h-100">
-    <div style="text-align: center;" class="header jumbotron">
-        <span class="font-weight-lighter text-dark" style="font-size: 37px;">{{textHello}}</span><br>
-        <span class="font-weight-lighter text-dark" style="font-size: 30px;" [innerHTML]="textIam"></span>
-        <span class="text-dark" style="font-size: 30px;" #hobbies id="hobbies"></span><br>
-        <span class="font-weight-lighter text-dark" style="font-size: 25px;" [innerHTML]="textInterests"></span><br>
+<section class="w-100 h-75 middle">
+    <div class="jumbotron-fluid header">
+        <span class="font-weight-lighter text-dark" style="font-size: 25px;" [innerHTML]="textHello"></span><br>
+        <div class="text-right">
+            <span class="font-weight-lighter text-dark" style="font-size: 37px;" [innerHTML]="textIam"></span>
+            <span class="font-weight-bolder text-dark" style="font-size: 37px;" #hobbies id="hobbies"></span>
+        </div>
+
+        <!-- <div class="bg-info  mt-4 p-3">
+            <span class="font-weight-lighter text-white " style="font-size: 25px;" [innerHTML]="textInterests"></span>
+        </div> -->
     </div>
-    <div id="checkout" class="text-center">
-        <a href="#projects"><span class="font-weight-lighter text-dark" style="font-size: 30px;" [innerHTML]="textCheckout"></span><br></a>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container text-center">
+            <h1 class="display-4">{{textMeetYou}}</h1>
+            <p class="lead"> {{textPresentation}}</p>
+        </div>
+    </div>
+</section>
+<section class="w-100 h-25">
+    <div id="checkout" class="text-center h-100">
+        <a href="#projects"><span class="align-middle font-weight-lighter text-dark" style="font-size: 30px;" [innerHTML]="textCheckout"></span><br></a>
     </div>
 </section>
 <section id="projects" class="w-100 mb-5 pr-5 pl-5">

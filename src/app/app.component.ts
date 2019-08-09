@@ -18,6 +18,8 @@ export class AppComponent implements OnInit {
   textInterests = '';
   textCheckout = '';
   textList = [];
+  textPresentation = '';
+  textMeetYou = '';
 
   hobbies: Typed;
   projects = [];
@@ -74,6 +76,12 @@ export class AppComponent implements OnInit {
     });
     this.translate.get('header.checkout').subscribe(res => {
       this.textCheckout = res;
+    });
+    this.translate.get('header.presentation').subscribe(res => {
+      this.textPresentation = res;
+    });
+    this.translate.get('header.nicetomeetyou').subscribe(res => {
+      this.textMeetYou = res;
     });
   }
 
