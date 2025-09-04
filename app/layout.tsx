@@ -6,19 +6,19 @@ import { Analytics } from "./components/analytics";
 
 export const metadata: Metadata = {
   title: {
-    default: "jesús salas",
+    default: "jesús salas | full stack developer",
     template: "%s | jesús salas",
   },
   description: "founder of hostreach.io",
   openGraph: {
-    title: "jesussalas.dev",
+    title: "jesussalas.pro",
     description:
       "founder of hostreach.io",
-    url: "https://jesussalas.dev",
-    siteName: "jesussalas.dev",
+    url: "https://jesussalas.pro",
+    siteName: "jesussalas.pro",
     images: [
       {
-        url: "https://jesussalas.dev/og.png",
+        url: "https://jesussalas.pro/og.png",
         width: 1920,
         height: 1080,
       },
