@@ -4,25 +4,68 @@ import { allProjects } from "contentlayer/generated";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 import { Article } from "./article";
-import { Redis } from "@upstash/redis";
 import { Eye } from "lucide-react";
 
-const redis = Redis.fromEnv();
-
 export const revalidate = 60;
+
+const formatDate = (date: string | Date | null | undefined) => {
+	if (!date) return 'Fecha no disponible';
+	
+	try {
+		let dateObj;
+		if (typeof date === 'string') {
+			// Si es string, añadir hora del mediodía para evitar problemas de zona horaria
+			dateObj = new Date(date + 'T12:00:00');
+		} else {
+			dateObj = new Date(date);
+		}
+		
+		// Verificar si la fecha es válida
+		if (isNaN(dateObj.getTime())) {
+			console.error('Invalid date:', date);
+			return 'Fecha inválida';
+		}
+		
+		return Intl.DateTimeFormat('es-ES', { dateStyle: "medium" }).format(dateObj);
+	} catch (error) {
+		console.error('Error formatting date:', date, error);
+		return 'Error en fecha';
+	}
+};
+
+const getDateISO = (date: string | Date | null | undefined) => {
+	if (!date) return '';
+	
+	try {
+		let dateObj;
+		if (typeof date === 'string') {
+			dateObj = new Date(date + 'T12:00:00');
+		} else {
+			dateObj = new Date(date);
+		}
+		
+		// Verificar si la fecha es válida
+		if (isNaN(dateObj.getTime())) {
+			console.error('Invalid date for ISO:', date);
+			return '';
+		}
+		
+		return dateObj.toISOString().split('T')[0];
+	} catch (error) {
+		console.error('Error getting ISO date:', date, error);
+		return '';
+	}
+};
+
 export default async function ProjectsPage() {
-  const views = (
-    await redis.mget<number[]>(
-      ...allProjects.map((p) => ["pageviews", "projects", p.slug].join(":")),
-    )
-  ).reduce((acc, v, i) => {
-    acc[allProjects[i].slug] = v ?? 0;
+  const views = allProjects.reduce((acc, project) => {
+    acc[project.slug] = 0;
     return acc;
   }, {} as Record<string, number>);
 
-  const featured = allProjects.find((project) => project.slug === "unkey")!;
-  const top2 = allProjects.find((project) => project.slug === "planetfall")!;
-  const top3 = allProjects.find((project) => project.slug === "highstorm")!;
+  const featured = allProjects.find((project) => project.slug === "hostreach.io")!;
+  const top2 = allProjects.find((project) => project.slug === "vendorati")!;
+  const top3 = allProjects.find((project) => project.slug === "supplyhost")!;
   const sorted = allProjects
     .filter((p) => p.published)
     .filter(
@@ -32,9 +75,12 @@ export default async function ProjectsPage() {
         project.slug !== top3.slug,
     )
     .sort(
-      (a, b) =>
-        new Date(b.date ?? Number.POSITIVE_INFINITY).getTime() -
-        new Date(a.date ?? Number.POSITIVE_INFINITY).getTime(),
+      (a, b) => {
+        // Manejar fechas nulas/undefined en el sort también
+        const dateA = a.date ? new Date(a.date).getTime() : 0;
+        const dateB = b.date ? new Date(b.date).getTime() : 0;
+        return dateB - dateA;
+      }
     );
 
   return (
@@ -55,32 +101,24 @@ export default async function ProjectsPage() {
           <Card>
             <Link href={`/projects/${featured.slug}`}>
               <article className="relative w-full h-full p-4 md:p-8">
-                <div className="flex items-center justify-between gap-2">
-                  <div className="text-xs text-zinc-100">
-                    {featured.date ? (
-                      <time dateTime={new Date(featured.date).toISOString()}>
-                        {Intl.DateTimeFormat(undefined, {
-                          dateStyle: "medium",
-                        }).format(new Date(featured.date))}
-                      </time>
-                    ) : (
-                      <span>SOON</span>
-                    )}
-                  </div>
-                  <span className="flex items-center gap-1 text-xs text-zinc-500">
-                    <Eye className="w-4 h-4" />{" "}
-                    {Intl.NumberFormat("en-US", { notation: "compact" }).format(
-                      views[featured.slug] ?? 0,
-                    )}
-                  </span>
-                </div>
-
-                <h2
+                <div className="flex items-center gap-2">
+                <div
+                      className={`w-2 h-2 rounded-full ${
+                        featured.live 
+                          ? 'bg-green-500' 
+                          : 'bg-gray-500'
+                      }`}
+                      title={featured.live ? 'En producción' : 'No publicado'}
+                    />
+                  <h2
                   id="featured-post"
-                  className="mt-4 text-3xl font-bold text-zinc-100 group-hover:text-white sm:text-4xl font-display"
+                  className="text-3xl font-bold text-zinc-100 group-hover:text-white sm:text-4xl font-display"
                 >
                   {featured.title}
                 </h2>
+                </div>
+
+                
                 <p className="mt-4 leading-8 duration-150 text-zinc-400 group-hover:text-zinc-300">
                   {featured.description}
                 </p>
@@ -96,7 +134,7 @@ export default async function ProjectsPage() {
           <div className="flex flex-col w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0 ">
             {[top2, top3].map((project) => (
               <Card key={project.slug}>
-                <Article project={project} views={views[project.slug] ?? 0} />
+                <Article project={project} />
               </Card>
             ))}
           </div>
@@ -109,7 +147,7 @@ export default async function ProjectsPage() {
               .filter((_, i) => i % 3 === 0)
               .map((project) => (
                 <Card key={project.slug}>
-                  <Article project={project} views={views[project.slug] ?? 0} />
+                  <Article project={project} />
                 </Card>
               ))}
           </div>
@@ -118,7 +156,7 @@ export default async function ProjectsPage() {
               .filter((_, i) => i % 3 === 1)
               .map((project) => (
                 <Card key={project.slug}>
-                  <Article project={project} views={views[project.slug] ?? 0} />
+                  <Article project={project} />
                 </Card>
               ))}
           </div>
@@ -127,7 +165,7 @@ export default async function ProjectsPage() {
               .filter((_, i) => i % 3 === 2)
               .map((project) => (
                 <Card key={project.slug}>
-                  <Article project={project} views={views[project.slug] ?? 0} />
+                  <Article project={project} />
                 </Card>
               ))}
           </div>

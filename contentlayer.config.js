@@ -25,6 +25,9 @@ export const Project = defineDocumentType(() => ({
 		published: {
 			type: "boolean",
 		},
+		live: {
+			type: "boolean",
+		},
 		title: {
 			type: "string",
 			required: true,

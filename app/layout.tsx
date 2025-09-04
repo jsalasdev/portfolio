@@ -6,19 +6,19 @@ import { Analytics } from "./components/analytics";
 
 export const metadata: Metadata = {
   title: {
-    default: "chronark.com",
-    template: "%s | chronark.com",
+    default: "jesús salas",
+    template: "%s | jesús salas",
   },
-  description: "Co-founder of unkey.dev and founder of planetfall.io",
+  description: "founder of hostreach.io",
   openGraph: {
-    title: "chronark.com",
+    title: "jesussalas.dev",
     description:
-      "Co-founder of unkey.dev and founder of planetfall.io",
-    url: "https://chronark.com",
-    siteName: "chronark.com",
+      "founder of hostreach.io",
+    url: "https://jesussalas.dev",
+    siteName: "jesussalas.dev",
     images: [
       {
-        url: "https://chronark.com/og.png",
+        url: "https://jesussalas.dev/og.png",
         width: 1920,
         height: 1080,
       },
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: "Chronark",
+    title: "jesús salas",
     card: "summary_large_image",
   },
   icons: {
